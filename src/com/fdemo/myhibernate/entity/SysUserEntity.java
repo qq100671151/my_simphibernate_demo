@@ -1,18 +1,28 @@
 package com.fdemo.myhibernate.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * @author fengxianbin
- * @description: TODO
+ * @description: 用户实体
  * @create 2020-12-21 16:35
  */
+@Entity
+@Table(name = "SYS_USER")
 public class SysUserEntity {
 
+    @Column(name = "ID")
     private String id;
 
+    @Column(name = "NAME")
     private String name;
 
+    @Column(name = "SEX")
     private String sex;
 
+    @Column(name = "AGE")
     private Integer age;
 
     public String getId() {
@@ -44,6 +54,16 @@ public class SysUserEntity {
     }
 
     public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public SysUserEntity() {
+    }
+
+    public SysUserEntity(String id, String name, String sex, Integer age) {
+        this.id = id;
+        this.name = name;
+        this.sex = sex;
         this.age = age;
     }
 
