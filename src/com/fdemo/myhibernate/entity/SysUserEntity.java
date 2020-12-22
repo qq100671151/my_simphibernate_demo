@@ -2,6 +2,7 @@ package com.fdemo.myhibernate.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
@@ -13,6 +14,7 @@ import javax.persistence.Table;
 @Table(name = "SYS_USER")
 public class SysUserEntity {
 
+    @Id
     @Column(name = "ID")
     private String id;
 
